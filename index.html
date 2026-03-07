@@ -3,46 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arda Ekiz | Mekatronik Portfolyosu</title>
+    <title>Öğrenci Araştırma Anketi</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
-        header { background: #2c3e50; color: #fff; padding: 40px 20px; text-align: center; border-bottom: 5px solid #3498db; }
-        header h1 { margin: 0; font-size: 2.5em; }
-        .container { max-width: 800px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; margin-top: 30px; }
-        .project { margin-bottom: 20px; padding: 15px; background: #fdfdfd; border-left: 4px solid #3498db; border-radius: 4px; }
-        .project h3 { margin-top: 0; color: #34495e; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        p.small-text {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #34495e;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            border-color: #3498db;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s, transform 0.1s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+        
+        /* Anket Ekranı */
+        .option-btn {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            border: 2px solid #bdc3c7;
+            margin-bottom: 10px;
+        }
+        .option-btn:hover {
+            background-color: #d5dbdb;
+            border-color: #95a5a6;
+        }
+
+        /* Sonuç ve Sürpriz Ekranı */
+        #result-screen h2 {
+            color: #e74c3c;
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        #btn-evet {
+            background-color: #2ecc71;
+            width: auto;
+            padding: 12px 30px;
+        }
+        #btn-hayir {
+            background-color: #e74c3c;
+            width: auto;
+            padding: 12px 30px;
+        }
+
+        /* Ekran Geçişleri İçin Sınıflar */
+        .screen {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        .active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Yükleme Animasyonu */
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #e74c3c;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Arda Ekiz</h1>
-        <p>Mekatronik Mühendisliği | Gömülü Sistemler & Prototipleme</p>
-    </header>
+
+<div class="container">
     
-    <div class="container">
-        <h2>Hakkımda</h2>
-        <p>Merhaba! Eskişehir'de yaşayan 21 yaşında bir Mekatronik Mühendisliği öğrencisiyim. Donanım tasarımı, otomotiv elektroniği ve gömülü sistemler üzerine projeler geliştiriyorum. Teorik bilgiyi pratiğe dökmeyi ve problemleri mühendislik yaklaşımıyla çözmeyi seviyorum.</p>
-
-        <h2>Öne Çıkan Projelerim</h2>
-        
-        <div class="project">
-            <h3>Peugeot 307 CAN-Bus Veri Okuma Sistemi</h3>
-            <p>Araç motor verilerini CAN-bus modülü ile anlık olarak okuyup, Arduino kullanarak özel tasarlanmış analog göstergelere aktaran sistem entegrasyonu.</p>
+    <div id="welcome-screen" class="screen active">
+        <h2>Öğrenci Araştırma Anketi</h2>
+        <div class="form-group">
+            <label>İsim Soyisim</label>
+            <input type="text" id="isim" placeholder="Adınız Soyadınız" autocomplete="off">
         </div>
-
-        <div class="project">
-            <h3>ESP32 Tabanlı Yapay Zeka Asistanı</h3>
-            <p>Mikrofon ve hoparlör donanımları entegre edilerek ESP32-S3 mikrodenetleyicisi üzerinden çalışan, sesli komut alıp yanıt verebilen asistan prototipi.</p>
+        <div class="form-group">
+            <label>Okuduğunuz Bölüm</label>
+            <input type="text" id="bolum" placeholder="Bölümünüz" autocomplete="off">
         </div>
-
-        <div class="project">
-            <h3>3D Baskı ve Mekanik Tasarım</h3>
-            <p>Ender 3 v2 kullanarak mekatronik projelerimdeki elektronik devreler için özel muhafazalar ve mekanik parçaların boyutlandırılması, tasarımı ve üretimi.</p>
-        </div>
-
-        <h2>İletişim</h2>
-        <p>Projelerim hakkında detaylı bilgi almak veya staj fırsatları için bana ulaşabilirsiniz.</p>
+        <p class="small-text">* Katılımınız için teşekkürler. Bilgileriniz KVKK kapsamında korunmakta olup kimseyle paylaşılmayacaktır.</p>
+        <button id="btn-basla">Teste Başla</button>
     </div>
+
+    <div id="survey-screen" class="screen">
+        <h3 id="question-text" style="color: #34495e; margin-bottom: 30px;">Soru buraya gelecek</h3>
+        <div id="options-container">
+            </div>
+        <p style="margin-top: 20px; color: #7f8c8d; font-size: 14px;" id="progress-text">Soru 1 / 5</p>
+    </div>
+
+    <div id="loading-screen" class="screen">
+        <div class="loader"></div>
+        <h3 style="color: #2c3e50;">Veriler Analiz Ediliyor...</h3>
+        <p style="color: #7f8c8d;">Sinerji uyumu hesaplanıyor</p>
+    </div>
+
+    <div id="result-screen" class="screen">
+        <h2>%96 Uyum! 🎉</h2>
+        <p style="font-size: 16px; color: #2c3e50; font-weight: 500;">Görünüşe göre frekanslarımız fazlasıyla tutuyor.</p>
+        <h3 id="teklif-text" style="margin: 20px 0; color: #e74c3c;">Teklif metni buraya gelecek</h3>
+        
+        <div class="buttons-container" id="yes-no-container">
+            <button id="btn-evet">Evet</button>
+            <button id="btn-hayir">Hayır</button>
+        </div>
+    </div>
+
+    <div id="appointment-screen" class="screen">
+        <h2>Harika! 🥳</h2>
+        <p style="margin-bottom: 20px; color: #34495e;">Detayları netleştirelim:</p>
+        <div class="form-group">
+            <label>Tarih:</label>
+            <input type="date" id="randevu-tarih">
+        </div>
+        <div class="form-group">
+            <label>Saat:</label>
+            <input type="time" id="randevu-saat">
+        </div>
+        <button id="btn-onayla" style="background-color: #2ecc71;">Planı Onayla</button>
+    </div>
+
+</div>
+
+<script>
+    // Havuzdaki 20 Soru
+    const allQuestions = [
+        { q: "Güne başlarken hangisi vazgeçilmezin?", opts: ["Kesinlikle kahve ☕", "Çay olmadan uyanamam 🫖"] },
+        { q: "Hafta sonu enerjin hangisine daha yakın?", opts: ["Doğada/parkta sakin bir yürüyüş 🌳", "Kalabalık ve enerjik bir mekan 🎉"] },
+        { q: "Hayatı nasıl yaşarsın?", opts: ["Her şey planlı programlı olmalı 📅", "Akışına bırak, anı yaşa 🌊"] },
+        { q: "Uyku düzenin nasıldır?", opts: ["Erken kalkan yol alır (Sabah insanı) 🌅", "Gece yeni başlıyor (Gece kuşu) 🦉"] },
+        { q: "Hangi evcil hayvanın enerjisi sana daha uygun?", opts: ["Köpeklerin sadakati ve enerjisi 🐕", "Kedilerin havalı umursamazlığı 🐈"] },
+        { q: "Müzik dinleme tarzın?", opts: ["Camlar açık son ses şarkı söylemek 🚗", "Kulaklığı takıp kendi dünyana dalmak 🎧"] },
+        { q: "Tatlı krizin geldiğinde?", opts: ["Çikolatalı, yoğun bir tatlı 🍫", "Meyveli, hafif ve ferah bir şeyler 🍓"] },
+        { q: "İdeal bir boş gününde ne yaparsın?", opts: ["Bilgisayar/konsol oyunlarına gömülmek 🎮", "Dizi/film maratonu yapmak 🍿"] },
+        { q: "Film izlerken nasılsındır?", opts: ["Mantık hatalarına takılırım 🕵️‍♀️", "Sadece anın ve hikayenin tadını çıkarırım 🎬"] },
+        { q: "Bir sorunla karşılaştığında?", opts: ["Pratik ve hızlı bir çözüm üretirim ⚡", "Her detayı mantık çerçevesinde analiz ederim 🧩"] },
+        { q: "Teknolojiyle aran nasıldır?", opts: ["Bozulana kadar kullanırım 📻", "En son çıkan yenilikleri severim 🚀"] },
+        { q: "İlk buluşmada garip bir sessizlik olduğunda?", opts: ["O sessizliğin tadını çıkarırım 🤫", "Hemen yeni ve eğlenceli bir konu açarım 🗣️"] },
+        { q: "Bir süper gücün olsa hangisini seçerdin?", opts: ["İnsanların zihnini okumak 🧠", "Zamanda yolculuk yapmak ⏳"] },
+        { q: "Hemen bir yetenek edinebilsen?", opts: ["Yeni bir dili sular seller gibi konuşmak 🌍", "Bir enstrümanı virtüöz gibi çalmak 🎸"] },
+        { q: "Tatil anlayışın nasıldır?", opts: ["Bilinmeyen sokaklarda haritasız kaybolmak 🗺️", "Lüks bir otelde bütün gün dinlenmek 🏖️"] },
+        { q: "Nasıl seyahat etmeyi seversin?", opts: ["Kendi arabanla uzun yola çıkmak 🛣️", "Uçakla hızlıca hedefe varmak ✈️"] },
+        { q: "Şu an bu testi çözerken içinden geçenler?", opts: ["Bu ne kadar garip bir anket 🤔", "Eğlenceliymiş, bakalım ne çıkacak 😎"] },
+        { q: "Yemek tercihin genellikle nasıldır?", opts: ["Ev yapımı, sağlıklı bir öğün 🥗", "Dışarıdan söylenen efsane bir fast food 🍔"] },
+        { q: "Hediye anlayışın hangisine yakın?", opts: ["Kendi elleriyle yapılmış bir emek 🛠️", "Şık ve kaliteli bir mağaza ürünü 🎁"] },
+        { q: "Egzersiz tarzın?", opts: ["Salon sporları ve ağırlık 💪", "Açık havada tempolu yürüyüş/koşu 🏃‍♀️"] }
+    ];
+
+    // Sabit 5. Soru
+    const finalQuestion = {
+        q: "Son olarak, keyifli bir gün geçirmek istesen hangi mekanı tercih edersin?",
+        opts: [
+            "Şehrin en iyi tatlıcısında şeker koması",
+            "Sessiz sakin bir yürüyüş ve kaliteli bir filtre kahve",
+            "Bol kahkahalı ve enerjik bir akşamüstü"
+        ]
+    };
+
+    let selectedQuestions = [];
+    let currentQuestionIndex = 0;
+    let finalChoiceIndex = -1;
+
+    // Elementleri Seç
+    const screenWelcome = document.getElementById('welcome-screen');
+    const screenSurvey = document.getElementById('survey-screen');
+    const screenLoading = document.getElementById('loading-screen');
+    const screenResult = document.getElementById('result-screen');
+    const screenAppointment = document.getElementById('appointment-screen');
+    
+    const btnBasla = document.getElementById('btn-basla');
+    const questionText = document.getElementById('question-text');
+    const optionsContainer = document.getElementById('options-container');
+    const progressText = document.getElementById('progress-text');
+    const teklifText = document.getElementById('teklif-text');
+
+    const btnEvet = document.getElementById('btn-evet');
+    const btnHayir = document.getElementById('btn-hayir');
+    const yesNoContainer = document.getElementById('yes-no-container');
+    const btnOnayla = document.getElementById('btn-onayla');
+
+    // Rastgele 4 soru seçme fonksiyonu
+    function getRandomQuestions() {
+        const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
+        selectedQuestions = shuffled.slice(0, 4);
+        selectedQuestions.push(finalQuestion); // 5. soruyu ekle
+    }
+
+    // Soruyu Ekrana Çizme
+    function loadQuestion() {
+        optionsContainer.innerHTML = ''; // Önceki butonları temizle
+        const currentQ = selectedQuestions[currentQuestionIndex];
+        
+        questionText.innerText = currentQ.q;
+        progressText.innerText = `Soru ${currentQuestionIndex + 1} / 5`;
+
+        currentQ.opts.forEach((opt, index) => {
+            const btn = document.createElement('button');
+            btn.className = 'option-btn';
+            btn.innerText = opt;
+            btn.onclick = () => handleAnswer(index);
+            optionsContainer.appendChild(btn);
+        });
+    }
+
+    // Cevaplandığında çalışacak fonksiyon
+    function handleAnswer(selectedIndex) {
+        // Eğer 5. sorudaysak (index 4), seçimi kaydet
+        if (currentQuestionIndex === 4) {
+            finalChoiceIndex = selectedIndex;
+            showLoading();
+        } else {
+            currentQuestionIndex++;
+            loadQuestion();
+        }
+    }
+
+    // Yükleme ekranı ve Sonuç hesaplama
+    function showLoading() {
+        screenSurvey.classList.remove('active');
+        screenLoading.classList.add('active');
+
+        setTimeout(() => {
+            screenLoading.classList.remove('active');
+            showResult();
+        }, 2500); // 2.5 saniye animasyon döner
+    }
+
+    function showResult() {
+        // Son sorudaki seçime göre teklif metnini belirle
+        if (finalChoiceIndex === 0) {
+            teklifText.innerText = "O zaman beraber harika bir tatlı yemeye ne dersin?";
+        } else if (finalChoiceIndex === 1) {
+            teklifText.innerText = "O zaman Sazova Parkı'nda güzel bir yürüyüşe ne dersin?";
+        } else if (finalChoiceIndex === 2) {
+            teklifText.innerText = "O zaman beraber bol kahkahalı bir akşamüstü geçirmeye ne dersin?";
+        }
+
+        screenResult.classList.add('active');
+    }
+
+    // Buton Olayları
+    btnBasla.addEventListener('click', () => {
+        const isim = document.getElementById('isim').value;
+        const bolum = document.getElementById('bolum').value;
+        
+        if(isim && bolum) {
+            getRandomQuestions();
+            screenWelcome.classList.remove('active');
+            screenSurvey.classList.add('active');
+            loadQuestion();
+        } else {
+            alert("Lütfen ankete başlamadan önce formu doldurunuz. (Merak etmeyin, veriler cihazda kalır!)");
+        }
+    });
+
+    // Hayır butonundan kaçma animasyonu
+    btnHayir.addEventListener('click', () => {
+        if (yesNoContainer.style.flexDirection === 'row-reverse') {
+            yesNoContainer.style.flexDirection = 'row';
+        } else {
+            yesNoContainer.style.flexDirection = 'row-reverse';
+        }
+    });
+
+    // Evet butonuna tıklayınca randevu ekranı
+    btnEvet.addEventListener('click', () => {
+        screenResult.classList.remove('active');
+        screenAppointment.classList.add('active');
+    });
+
+    // Planı onayla
+    btnOnayla.addEventListener('click', () => {
+        const tarih = document.getElementById('randevu-tarih').value;
+        const saat = document.getElementById('randevu-saat').value;
+        if(tarih && saat) {
+            alert("Harika! Plan kaydedildi. Görüşmek üzere! 😎");
+        } else {
+            alert("Lütfen tarih ve saati seçelim.");
+        }
+    });
+
+</script>
 </body>
 </html>
