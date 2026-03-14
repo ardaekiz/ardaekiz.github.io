@@ -3,12 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim | Portfolyo</title>
+    <title>İletişim | Arda Ekiz</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 0; }
+        
+        /* Üst Menü */
+        nav { background: #2c3e50; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 16px; }
+        nav a:hover { color: #3498db; }
+        
+        /* İki Sütunlu Ana Konteyner */
+        .contact-wrapper { 
+            display: flex; 
+            max-width: 900px; 
+            margin: 50px auto; 
+            background: white; 
+            border-radius: 10px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1); 
+            overflow: hidden; /* Kenar kıvrımlarından taşmayı önler */
+        }
+        
+        /* Sol Kutu (İletişim Bilgileri) */
+        .contact-info { 
+            flex: 1; 
+            background: #2c3e50; 
+            color: white; 
+            padding: 40px; 
+        }
+        .contact-info h2 { margin-top: 0; color: white; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .contact-info p { color: #bdc3c7; margin-bottom: 30px; line-height: 1.6; }
+        
+        .info-item { display: flex; align-items: center; margin-bottom: 25px; }
+        .info-item .icon { font-size: 24px; margin-right: 15px; }
+        .info-item h4 { margin: 0; color: white; font-size: 16px; }
+        .info-item a, .info-item span { color: #3498db; text-decoration: none; font-size: 14px; }
+        .info-item a:hover { color: #2980b9; text-decoration: underline; }
+
+        /* Sağ Kutu (Form Alanı) */
+        .form-container { 
+            flex: 1.5; 
+            padding: 40px; 
+        }
+        .form-container h2 { margin-top: 0; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        label { display: block; margin-top: 15px; font-weight: bold; color: #555; font-size: 14px; }
+        input[type="text"], input[type="email"], textarea { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; font-family: inherit; }
+        button { margin-top: 20px; background-color: #3498db; color: white; border: none; padding: 12px 20px; width: 100%; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { background-color: #2980b9; }
+
+        /* Mobil Cihazlar İçin Uyum (Telefonda Alt Alta Dizilir) */
+        @media (max-width: 768px) {
+            .contact-wrapper { flex-direction: column; margin: 20px; }
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar">
+    
+     <nav class="navbar">
         <div class="logo">PROJE<span>LOGOSU</span></div>
         <ul class="nav-links">
             <li><a href="index">Anasayfa</a></li> <li><a href="index.html#projeler">Projeler</a></li>
@@ -21,32 +73,66 @@
         </div>
     </nav>
 
-    <section class="contact-section">
-        <h2>Benimle İletişime Geç</h2>
-        <p class="contact-desc">Projeler veya işbirlikleri hakkında konuşmak için bana mesaj gönderebilirsin.</p>
+    <div class="contact-wrapper">
         
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>İletişim Bilgileri</h3>
-                <p><strong>📍 Konum:</strong> Eskişehir, Türkiye</p>
-                <p><strong>📧 E-posta:</strong> iletisim@ornek.com</p>
-                <p><strong>🔗 LinkedIn:</strong> linkedin.com/in/kullaniciadin</p>
+        <div class="contact-info">
+            <h2>İletişim Bilgileri</h2>
+            <p>Projelerim, staj fırsatları veya aklınıza takılan sorular için bana aşağıdaki kanallardan ulaşabilirsiniz.</p>
+
+            <div class="info-item">
+                <div class="icon">📧</div>
+                <div>
+                    <h4>E-Posta</h4>
+                    <a href="mailto:iletisim@ardaekiz.me">iletisim@ardaekiz.me</a>
+                </div>
             </div>
 
-            <form class="contact-form">
-                <input type="text" placeholder="Adınız Soyadınız" required>
-                <input type="email" placeholder="E-posta Adresiniz" required>
-                <input type="text" placeholder="Konu" required>
-                <textarea rows="5" placeholder="Mesajınız..." required></textarea>
-                <button type="submit  class="btn">Gönder</button>
+            <div class="info-item">
+                <div class="icon">📞</div>
+                <div>
+                    <h4>Telefon</h4>
+                    <span>+90 545 856 0028</span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon">💼</div>
+                <div>
+                    <h4>LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/ardaekiz/" target="_blank">linkedin.com/in/ardaekiz</a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon">📸</div>
+                <div>
+                    <h4>Instagram</h4>
+                    <a href="https://instagram.com/ardaekiz_" target="_blank">@ardaekiz_</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h2>Bana Mesaj Gönderin</h2>
+            <form action="https://formspree.io/f/meerzljj" method="POST">
+                
+                <label>Adınız Soyadınız:</label>
+                <input type="text" name="isim" required placeholder="Adınız Soyadınız">
+                
+                <label>E-posta Adresiniz:</label>
+                <input type="email" name="email" required placeholder="Size geri dönüş yapabilmem için...">
+                
+                <label>Konu:</label>
+                <input type="text" name="konu" required placeholder="Mesajınızın konusu nedir?">
+                
+                <label>Mesajınız:</label>
+                <textarea name="mesaj" rows="5" required placeholder="Mesajınızı buraya yazabilirsiniz..."></textarea>
+                
+                <button type="submit">Mesajı Gönder</button>
             </form>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
-    </footer>
+        
+    </div>
 
 </body>
-
 </html>
