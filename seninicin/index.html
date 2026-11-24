@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FDFBF7">
+  <title>Senin İçin 🌼</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════ BÖLÜM 1: Açılış Ekranı ═══════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <!-- Dokun İpucu (Başlangıç ekranı) -->
+      <div class="tap-cue" id="tapCue">
+        <div class="tap-circle">
+          <svg class="tap-sparkle" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L14.2 9.8L22 12L14.2 14.2L12 22L9.8 14.2L2 12L9.8 9.8L12 2Z" fill="#F4C95D"/>
+          </svg>
+        </div>
+        <p class="tap-text">Dokun ✨</p>
+      </div>
+
+      <!-- Çiçek Buketi (Papatyalar + Unutma Beni Çiçekleri) -->
+      <div class="daisy-container" id="daisyContainer">
+        <div class="bouquet-wrapper" id="bouquetWrapper">
+          <svg class="daisy-bouquet" viewBox="0 0 340 400" xmlns="http://www.w3.org/2000/svg">
+            <!-- Saplar & Yeşillikler -->
+            <path d="M170 390 Q130 310 110 240" stroke="#8DA399" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <path d="M170 390 Q150 290 140 200" stroke="#8DA399" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <path d="M170 390 Q170 280 170 170" stroke="#8DA399" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <path d="M170 390 Q190 290 205 200" stroke="#8DA399" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <path d="M170 390 Q210 310 230 240" stroke="#8DA399" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            
+            <!-- Yan yeşil yaprak dalları -->
+            <path d="M140 330 Q90 300 95 270" stroke="#8DA399" stroke-width="2.5" fill="#A8C5A055" stroke-linecap="round"/>
+            <path d="M200 320 Q250 290 245 260" stroke="#8DA399" stroke-width="2.5" fill="#A8C5A055" stroke-linecap="round"/>
+            <path d="M150 270 Q110 240 120 215" stroke="#8DA399" stroke-width="2" fill="#A8C5A044" stroke-linecap="round"/>
+            <path d="M190 260 Q230 230 220 205" stroke="#8DA399" stroke-width="2" fill="#A8C5A044" stroke-linecap="round"/>
+
+            <!-- Bağcık/Kurdele detayı -->
+            <ellipse cx="170" cy="355" rx="14" ry="7" fill="#E8998D" opacity="0.8"/>
+            <path d="M165 358 Q155 380 150 395" stroke="#E8998D" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M175 358 Q185 380 190 395" stroke="#E8998D" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+            <!-- ═══════ UNUTMA BENİ ÇİÇEKLERİ (Forget-me-not - Mavi Kır Çiçekleri) ═══════ -->
+            <!-- Mavi Çiçek 1 (sol alt ara) -->
+            <g class="forget-me-not flower-sway-2" transform="translate(100, 260)">
+              <circle cx="0" cy="-6" r="4" fill="#6EA8FE"/>
+              <circle cx="5.7" cy="-1.8" r="4" fill="#6EA8FE"/>
+              <circle cx="3.5" cy="4.8" r="4" fill="#6EA8FE"/>
+              <circle cx="-3.5" cy="4.8" r="4" fill="#6EA8FE"/>
+              <circle cx="-5.7" cy="-1.8" r="4" fill="#6EA8FE"/>
+              <circle cx="0" cy="0" r="2.2" fill="#FFE066"/>
+              <circle cx="0" cy="0" r="0.8" fill="#FFFFFF"/>
+            </g>
+
+            <!-- Mavi Çiçek 2 (sol üst ara) -->
+            <g class="forget-me-not flower-sway-1" transform="translate(125, 175)">
+              <circle cx="0" cy="-5.5" r="3.6" fill="#74B0FF"/>
+              <circle cx="5.2" cy="-1.7" r="3.6" fill="#74B0FF"/>
+              <circle cx="3.2" cy="4.4" r="3.6" fill="#74B0FF"/>
+              <circle cx="-3.2" cy="4.4" r="3.6" fill="#74B0FF"/>
+              <circle cx="-5.2" cy="-1.7" r="3.6" fill="#74B0FF"/>
+              <circle cx="0" cy="0" r="2" fill="#FFE066"/>
+              <circle cx="0" cy="0" r="0.7" fill="#FFFFFF"/>
+            </g>
+
+            <!-- Mavi Çiçek 3 (merkez ara) -->
+            <g class="forget-me-not flower-sway-3" transform="translate(172, 215)">
+              <circle cx="0" cy="-5" r="3.4" fill="#6499F0"/>
+              <circle cx="4.8" cy="-1.5" r="3.4" fill="#6499F0"/>
+              <circle cx="3" cy="4.1" r="3.4" fill="#6499F0"/>
+              <circle cx="-3" cy="4.1" r="3.4" fill="#6499F0"/>
+              <circle cx="-4.8" cy="-1.5" r="3.4" fill="#6499F0"/>
+              <circle cx="0" cy="0" r="1.8" fill="#FFE066"/>
+              <circle cx="0" cy="0" r="0.6" fill="#FFFFFF"/>
+            </g>
+
+            <!-- Mavi Çiçek 4 (sağ alt ara) -->
+            <g class="forget-me-not flower-sway-2" transform="translate(245, 260)">
+              <circle cx="0" cy="-6" r="4" fill="#6EA8FE"/>
+              <circle cx="5.7" cy="-1.8" r="4" fill="#6EA8FE"/>
+              <circle cx="3.5" cy="4.8" r="4" fill="#6EA8FE"/>
+              <circle cx="-3.5" cy="4.8" r="4" fill="#6EA8FE"/>
+              <circle cx="-5.7" cy="-1.8" r="4" fill="#6EA8FE"/>
+              <circle cx="0" cy="0" r="2.2" fill="#FFE066"/>
+              <circle cx="0" cy="0" r="0.8" fill="#FFFFFF"/>
+            </g>
+
+            <!-- Mavi Çiçek 5 (sağ üst ara) -->
+            <g class="forget-me-not flower-sway-1" transform="translate(215, 175)">
+              <circle cx="0" cy="-5.5" r="3.6" fill="#74B0FF"/>
+              <circle cx="5.2" cy="-1.7" r="3.6" fill="#74B0FF"/>
+              <circle cx="3.2" cy="4.4" r="3.6" fill="#74B0FF"/>
+              <circle cx="-3.2" cy="4.4" r="3.6" fill="#74B0FF"/>
+              <circle cx="-5.2" cy="-1.7" r="3.6" fill="#74B0FF"/>
+              <circle cx="0" cy="0" r="2" fill="#FFE066"/>
+              <circle cx="0" cy="0" r="0.7" fill="#FFFFFF"/>
+            </g>
+
+            <!-- ═══════ PAPATYALAR (5 Adet zengin ve dolgun) ═══════ -->
+            <!-- Papatya 1 (En Sol) -->
+            <g transform="translate(110, 240)">
+              <g class="flower-sway flower-sway-1">
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(0)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(30)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(60)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(90)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(120)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(150)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(180)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(210)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(240)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(270)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(300)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(330)"/>
+                <circle cx="0" cy="0" r="9.5" fill="#F4C95D"/>
+                <circle cx="-2" cy="-2" r="1.6" fill="#E8B84D" opacity="0.6"/>
+              </g>
+            </g>
+
+            <!-- Papatya 2 (Sol Orta) -->
+            <g transform="translate(140, 200)">
+              <g class="flower-sway flower-sway-2">
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(0)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(30)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(60)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(90)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(120)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(150)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(180)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(210)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(240)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(270)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(300)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(330)"/>
+                <circle cx="0" cy="0" r="11" fill="#F4C95D"/>
+                <circle cx="-3" cy="-2" r="2" fill="#E8B84D" opacity="0.6"/>
+              </g>
+            </g>
+
+            <!-- Papatya 3 (En Üst Merkez - En Büyük) -->
+            <g transform="translate(170, 160)">
+              <g class="flower-sway flower-sway-3">
+                <ellipse cx="0" cy="-26" rx="8" ry="17" fill="#FFFFFF" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(0)"/>
+                <ellipse cx="0" cy="-26" rx="8" ry="17" fill="#FFFFFF" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(30)"/>
+                <ellipse cx="0" cy="-26" rx="8" ry="17" fill="#FFFFFF" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(60)"/>
+                <ellipse cx="0" cy="-26" rx="8" ry="17" fill="#FFFFFF" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(90)"/>
+                <ellipse cx="0" cy="-26" rx="8" ry="17" fill="#FFFFFF" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(120)"/>
+                <ellipse cx="0" cy="-26" rx="8" ry="17" fill="#FFFFFF" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(150)"/>
+                <ellipse cx="0" cy="-26" rx="8" ry="17" fill="#FFFFFF" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(180)"/>
+                <ellipse cx="0" cy="-26" rx="8" ry="17" fill="#FFFFFF" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(210)"/>
+                <ellipse cx="0" cy="-26" rx="8" ry="17" fill="#FFFFFF" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(240)"/>
+                <ellipse cx="0" cy="-26" rx="8" ry="17" fill="#FFFFFF" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(270)"/>
+                <ellipse cx="0" cy="-26" rx="8" ry="17" fill="#FFFFFF" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(300)"/>
+                <ellipse cx="0" cy="-26" rx="8" ry="17" fill="#FFFFFF" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(330)"/>
+                <circle cx="0" cy="0" r="13" fill="#F4C95D"/>
+                <circle cx="-4" cy="-3" r="2.4" fill="#E8B84D" opacity="0.6"/>
+              </g>
+            </g>
+
+            <!-- Papatya 4 (Sağ Orta) -->
+            <g transform="translate(205, 200)">
+              <g class="flower-sway flower-sway-1">
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(0)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(30)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(60)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(90)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(120)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(150)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(180)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(210)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(240)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(270)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(300)"/>
+                <ellipse cx="0" cy="-23" rx="7" ry="15" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(330)"/>
+                <circle cx="0" cy="0" r="11" fill="#F4C95D"/>
+                <circle cx="3" cy="-2" r="2" fill="#E8B84D" opacity="0.6"/>
+              </g>
+            </g>
+
+            <!-- Papatya 5 (En Sağ) -->
+            <g transform="translate(230, 240)">
+              <g class="flower-sway flower-sway-2">
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(0)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(30)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(60)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(90)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(120)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(150)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(180)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(210)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(240)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(270)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(300)"/>
+                <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#FFFDF9" stroke="#E8DFD0" stroke-width="0.5" transform="rotate(330)"/>
+                <circle cx="0" cy="0" r="9.5" fill="#F4C95D"/>
+                <circle cx="2" cy="-2" r="1.6" fill="#E8B84D" opacity="0.6"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Açılış sonrası mesaj -->
+      <div class="hero-message" id="heroMessage">
+        <p class="hero-text">Şu an kapına gerçek bir çiçek bırakamıyorum ama bu papatyalar hiç solmasın, benim için ne kadar önemli olduğunu hep hatırlatsın.</p>
+        <div class="scroll-hint" id="scrollHint">
+          <span>Aşağı kaydır</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Yaprak parçacıkları için canvas -->
+    <canvas id="petalCanvas"></canvas>
+  </section>
+
+  <!-- ═══════════════ BÖLÜM 2: Zarf Mektubu ═══════════════ -->
+  <section id="envelope-section" class="section envelope-section">
+    <h2 class="section-title reveal">Kalbim Seninle 💌</h2>
+
+    <div class="envelope-wrapper reveal">
+      <div class="envelope" id="envelope">
+        <!-- Zarf gövdesi -->
+        <div class="envelope-body">
+          <div class="envelope-back"></div>
+
+          <!-- Mektup kağıdı -->
+          <div class="letter" id="letter">
+            <p class="letter-text">
+              Bazen kelimeleri doğru seçemeyip en sevdiğim insanı istemeden kırabiliyorum. Dün yanında olamadığım ve sana bunu hissettiremediğim için çok özür dilerim.<br><br>
+              Uzakta olsam da her an seni düşünüyorum; senin sağlığın ve mutluluğun benim için dünyalara bedel. Bir an önce tamamen toparlanmanı diliyorum, seni çok seviyorum.
+            </p>
+          </div>
+
+          <!-- Zarf ön kapağı -->
+          <div class="envelope-front"></div>
+        </div>
+
+        <!-- Zarf kapağı (üst flap) -->
+        <div class="envelope-flap" id="envelopeFlap">
+          <div class="wax-seal">
+            <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="16" fill="#E8998D"/>
+              <circle cx="18" cy="18" r="14" fill="#D4786B" opacity="0.6"/>
+              <path d="M18 12 C18 12, 12 16, 12 20 C12 24, 18 27, 18 27 C18 27, 24 24, 24 20 C24 16, 18 12, 18 12Z" fill="#E8998D"/>
+              <path d="M18 12 C18 12, 12 16, 12 20 C12 24, 18 27, 18 27" fill="#F4A39A" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <span class="envelope-label" id="envelopeLabel">Dokun ve aç</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ BÖLÜM 3: Mesafe & Karakter Buluşması ═══════════════ -->
+  <section id="distance-section" class="section distance-section">
+    <h2 class="section-title reveal">Aramızda kilometreler olsa da...</h2>
+
+    <div class="journey-container reveal" id="journeyContainer">
+      <div class="distance-stage" id="distanceStage">
+        <!-- Sol Şehir: Eskişehir ve Erkek Karakter (Tek position: relative kapsayıcı) -->
+        <div class="char-station station-left" id="stationLeft">
+          <div class="character-container boy-character" id="boyChar">
+            <!-- Sarılma anında tepelerinde süzülecek minik kalpler -->
+            <div class="hug-overhead-hearts" id="overheadHearts">
+              <span class="overhead-heart oh1">💖</span>
+              <span class="overhead-heart oh2">🌸</span>
+              <span class="overhead-heart oh3">💕</span>
+              <span class="overhead-heart oh4">💗</span>
+            </div>
+
+            <img src="ardak.png" alt="Arda" class="character-head boy-head-img" id="boyHeadImg">
+            <svg class="character-body-svg boy-body" viewBox="0 0 70 65" width="82" height="76" xmlns="http://www.w3.org/2000/svg">
+              <!-- Gölge -->
+              <ellipse cx="35" cy="60" rx="18" ry="4" fill="#3D352E" opacity="0.12"/>
+              <!-- Bacaklar -->
+              <rect x="25" y="38" width="8" height="18" rx="4" fill="#3D352E"/>
+              <rect x="37" y="38" width="8" height="18" rx="4" fill="#3D352E"/>
+              <ellipse cx="28" cy="55" rx="6" ry="3.5" fill="#6B5F54"/>
+              <ellipse cx="42" cy="55" rx="6" ry="3.5" fill="#6B5F54"/>
+              <!-- Vücut (Adaçayı Yeşili Kazak) -->
+              <rect x="18" y="16" width="34" height="25" rx="9" fill="#8DA399"/>
+              <!-- Yaka detayı -->
+              <path d="M28 16 Q35 22 42 16" stroke="#758B82" stroke-width="2" fill="none"/>
+              <!-- Sol Kol (Dış kol) -->
+              <path class="boy-arm-left" d="M19 20 Q10 32 14 42" stroke="#8DA399" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+              <circle cx="14" cy="42" r="3.5" fill="#FFE0BD"/>
+              <!-- Sağ Kol (İç kol - Kızın beline/omzuna uzanan sarılma kolu) -->
+              <g class="boy-hug-arm-group">
+                <path class="boy-arm-right" d="M51 20 Q60 32 56 42" stroke="#8DA399" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+                <circle class="boy-hand-right" cx="56" cy="42" r="3.5" fill="#FFE0BD"/>
+              </g>
+            </svg>
+          </div>
+          <span class="city-name">Eskişehir</span>
+        </div>
+
+        <!-- Aradaki Kavisli Yol -->
+        <div class="road-track" id="roadTrack">
+          <svg class="road-svg" viewBox="0 0 320 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="journeyPath" d="M10 35 Q85 8 160 35 Q235 62 310 35" stroke="#E8998D" stroke-width="3" stroke-dasharray="8 6" fill="none" opacity="0.55"/>
+          </svg>
+          <!-- Yolda hareket eden küçük kalp -->
+          <div class="path-runner-heart" id="pathRunnerHeart">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#E8998D">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Sağ Şehir: Bayburt ve Kadın Karakter (Tek position: relative kapsayıcı) -->
+        <div class="char-station station-right" id="stationRight">
+          <div class="character-container girl-character" id="girlChar">
+            <img src="zeynepk.png" alt="Zeynep" class="character-head girl-head-img" id="girlHeadImg">
+            <svg class="character-body-svg girl-body" viewBox="0 0 70 65" width="82" height="76" xmlns="http://www.w3.org/2000/svg">
+              <!-- Gölge -->
+              <ellipse cx="35" cy="60" rx="18" ry="4" fill="#3D352E" opacity="0.12"/>
+              <!-- Bacaklar -->
+              <rect x="25" y="40" width="7" height="17" rx="3.5" fill="#FFE0BD"/>
+              <rect x="38" y="40" width="7" height="17" rx="3.5" fill="#FFE0BD"/>
+              <ellipse cx="28" cy="56" rx="5.5" ry="3" fill="#E8998D"/>
+              <ellipse cx="42" cy="56" rx="5.5" ry="3" fill="#E8998D"/>
+              <!-- Elbise (Pastel Mercan/Şeftali) -->
+              <path d="M21 18 L49 18 L55 42 L15 42 Z" fill="#E8998D"/>
+              <!-- Kemer/Fiyonk -->
+              <rect x="23" y="27" width="24" height="3" rx="1.5" fill="#D4786B" opacity="0.6"/>
+              <!-- Sol Kol (İç kol - Erkeğin omzuna/sırtına uzanan sarılma kolu) -->
+              <g class="girl-hug-arm-group">
+                <path class="girl-arm-left" d="M20 20 Q12 30 16 39" stroke="#FFE0BD" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+                <circle class="girl-hand-left" cx="16" cy="39" r="3.2" fill="#FFE0BD"/>
+              </g>
+              <!-- Sağ Kol (Dış kol) -->
+              <path class="girl-arm-right" d="M50 20 Q58 30 54 39" stroke="#FFE0BD" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+              <circle cx="54" cy="39" r="3.2" fill="#FFE0BD"/>
+            </svg>
+          </div>
+          <span class="city-name">Bayburt</span>
+        </div>
+      </div>
+
+      <!-- Etkileşim Butonu -->
+      <button class="come-to-you-btn" id="comeToYouBtn">
+        <span>Yanına Gel 🤍</span>
+      </button>
+
+      <!-- Sarılınca Beliren Kalpler & Mesaj -->
+      <div class="hug-message-box" id="hugMessageBox">
+        <div class="floating-hearts" id="floatingHearts">
+          <span class="f-heart h1">💖</span>
+          <span class="f-heart h2">🌸</span>
+          <span class="f-heart h3">💕</span>
+          <span class="f-heart h4">✨</span>
+          <span class="f-heart h5">💗</span>
+        </div>
+        <p class="hug-quote">Mesafeler sadece sayıdan ibaret, kalbim hep seninle.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ BÖLÜM 5: Footer ═══════════════ -->
+  <footer class="footer reveal">
+    <div class="footer-daisy">
+      <svg width="28" height="28" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(30,30)">
+          <ellipse cx="0" cy="-14" rx="4" ry="10" fill="white" stroke="#f0e6d0" stroke-width="0.3" transform="rotate(0)"/>
+          <ellipse cx="0" cy="-14" rx="4" ry="10" fill="white" stroke="#f0e6d0" stroke-width="0.3" transform="rotate(45)"/>
+          <ellipse cx="0" cy="-14" rx="4" ry="10" fill="white" stroke="#f0e6d0" stroke-width="0.3" transform="rotate(90)"/>
+          <ellipse cx="0" cy="-14" rx="4" ry="10" fill="white" stroke="#f0e6d0" stroke-width="0.3" transform="rotate(135)"/>
+          <ellipse cx="0" cy="-14" rx="4" ry="10" fill="white" stroke="#f0e6d0" stroke-width="0.3" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-14" rx="4" ry="10" fill="white" stroke="#f0e6d0" stroke-width="0.3" transform="rotate(225)"/>
+          <ellipse cx="0" cy="-14" rx="4" ry="10" fill="white" stroke="#f0e6d0" stroke-width="0.3" transform="rotate(270)"/>
+          <ellipse cx="0" cy="-14" rx="4" ry="10" fill="white" stroke="#f0e6d0" stroke-width="0.3" transform="rotate(315)"/>
+          <circle cx="0" cy="0" r="6" fill="#F4C95D"/>
+        </g>
+      </svg>
+    </div>
+    <p class="footer-text">Şimdi dinlenmene bak ve hiç acele etme; seni yormadan, bunaltmadan sadece iyi olmanı bekliyorum.<br>Ne zaman konuşmak istersen ben hep buradayım.<br>Tekrar çok geçmiş olsun, seni çok seviyorum.</p>
+    
+    <a href="papatyafali.html" class="fortune-link-btn">
+      <span>🌼 Senin İçin Küçük Bir Papatya Falı</span>
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
